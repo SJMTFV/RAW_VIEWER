@@ -1,6 +1,15 @@
+cargo-features = ["edition2024"]
+
 [package]
-name = "raw_viewer"
+name = "libraw_viewer"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
+build = "build.rs"
 
 [dependencies]
+eframe = "0.22"
+egui = "0.22"
+rfd = "0.12"
+libc = "0.2"
+image = "0.24"
+winapi = { version = "0.3.9", default-features = false, features = ["winuser", "windef"] }
